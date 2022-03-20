@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .button {
+    @apply p-1 border rounded uppercase font-semibold text-sm bg-white hover:bg-gray-100 hover:cursor-pointer;
+  }
+  .button-lg {
+    @apply p-2 border rounded uppercase text-xs tracking-wider font-bold bg-white hover:bg-gray-100 hover:cursor-pointer;
+  }
+  .button-sm {
+    @apply px-2 py-1 border rounded uppercase text-xs tracking-widest font-semibold bg-white hover:bg-gray-100 hover:cursor-pointer;
+  }
+  .input {
+    @apply px-2 py-1 border rounded;
+  }
+  .heading {
+    @apply text-2xl font-light tracking-wider my-4;
+  }
+  .subheading {
+    @apply tracking-wider text-sm font-semibold mb-2;
+  }
+  .scrollable-content {
+    @apply h-64 overflow-auto bg-gray-100 p-4 mb-8;
+  }
+  .bordered-item {
+    @apply border rounded p-4 bg-white;
+  }
+}
+
+html,
+body,
+div[id^="single-spa-application"] {
+  width: 100%;
+  height: 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
